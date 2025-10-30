@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18.2.0-blue?logo=react&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TailwindCSS-3.3.2-06B6D4?logo=tailwindcss&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Axios-HTTP-blueviolet?logo=axios&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JWT-Auth-success?logo=jsonwebtokens&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Node.js-18.x-green?logo=node.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Build-NPM-red?logo=npm&logoColor=white"/>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">🎨 JobboardX Frontend</h1>
+<p align="center"><i>
+A modern, responsive React + TailwindCSS web client for the JobboardX microservice platform.
+</i></p>
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+Designed to deliver a seamless experience for job seekers and recruiters.  It connects with the JobboardX backend microservices to enable authentication, job postings, and real-time data visualization.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Tech Stack
 
-### `npm test`
+| Category | Technologies |
+|-----------|---------------|
+| **Framework** | React.js (CRA) |
+| **Styling** | TailwindCSS, PostCSS |
+| **State Management** | React Hooks |
+| **API Layer** | Axios |
+| **Authentication** | JWT (JSON Web Token) |
+| **Build Tooling** | NPM / Node.js |
+| **Environment** | `.env` configuration for API endpoints |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧱 Folder Structure
+frontend/<br>
+├── public/<br>
+│ ├── index.html<br>
+│ └── manifest.json<br>
+├── src/<br>
+│ ├── api/<br>
+│ │ └── client.js # Axios base configuration<br>
+│ ├── assets/<br>
+│ │ └── bg.png<br>
+│ ├── pages/<br>
+│ │ └── LoginPage.jsx # User login interface<br>
+│ ├── App.js<br>
+│ ├── index.js<br>
+│ ├── App.css<br>
+│ └── index.css<br>
+├── package.json<br>
+├── tailwind.config.js<br>
+├── postcss.config.js<br>
+└── README.md<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚙️ Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1️⃣ Prerequisites
+- Node.js ≥ 18.x  
+- NPM ≥ 9.x  
+- Backend server (Auth + Job services) running locally or on cloud  
 
-### `npm run eject`
+### 2️⃣ Installation
+```bash
+cd frontend
+npm install
+```
+### 3️⃣ Run the App
+```bash
+npm start
+```
+The app runs at 👉 http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🔐 Environment Variables
+Create a .env file in the frontend folder:
+```bash
+REACT_APP_API_BASE_URL=http://localhost:8080/api/v1
+```
+(Update the base URL to match your backend gateway)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔄Integration Roadmap
+| Feature                          | Status         |
+| -------------------------------- | -------------- |
+| Basic UI Setup                   | ✅ Done         |
+| Auth Service Integration (Login) | ⚙️ In Progress |
+| Job Listings & Filters           | 🔜 Planned     |
+| Token-based Authorization        | 🔜 Planned     |
+| Deployment (Vercel / Netlify)    | 🔜 Planned     |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🪄 UI Preview
+<img width="1919" height="862" alt="Screenshot 2025-10-28 144118" src="https://github.com/user-attachments/assets/94f99c95-0e2c-4d88-8274-49d2781d55dc" />
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
